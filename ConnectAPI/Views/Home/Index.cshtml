@@ -1,0 +1,24 @@
+﻿@{
+    List<Menu> menus = (List<Menu>)ViewBag.Menus;
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Descricao</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach(var x in menus)
+            {
+                <tr>
+                    <td>@x.Nome</td>
+                    <td>@x.Descricao</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
